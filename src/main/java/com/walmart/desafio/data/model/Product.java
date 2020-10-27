@@ -52,7 +52,7 @@ public class Product {
 	}
 
 	public String getImage() {
-		return "http://" + image;
+		return !image.contains("http://") ? "http://" + image : image;
 	}
 
 	public long getPrice() {

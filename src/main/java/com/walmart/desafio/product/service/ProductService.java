@@ -60,6 +60,6 @@ public class ProductService {
 	}
 
 	private double getDiscount(String searchBy) {
-		return utils.isPalindrome(searchBy) ? palindromeDiscount : 0;
+		return searchBy.length() > 3 && utils.isPalindrome(searchBy) ? palindromeDiscount : 0;
 	}
 }
